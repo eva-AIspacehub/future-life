@@ -1,1 +1,1016 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>《万物来信》</title></head><body><script src="chunk1.js"></script><script>(async()=>{const b64=window.__WANWU_CHUNKS.join("");const b=Uint8Array.from(atob(b64),c=>c.charCodeAt(0));const r=new Response(new Blob([b]).stream().pipeThrough(new DecompressionStream("gzip")));document.open();document.write(await r.text());document.close();})();</script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="《万物来信》全球原创超级IP开发计划：老板精简版与完整详细版合一的交互式提案。">
+<title>《万物来信》全球原创超级IP开发计划｜交互修正版</title>
+<style>
+:root{
+  --bg:#070707;--bg2:#0e0d0b;--panel:#13110e;--paper:#f3ead9;--gold:#d2aa61;
+  --gold2:#f2d79f;--red:#8f2e25;--ink:#1d1913;--muted:#a89f90;--line:rgba(242,215,159,.18);
+  --max:1320px;--shadow:0 30px 90px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:
+radial-gradient(circle at 13% 8%,rgba(210,170,97,.12),transparent 26%),
+radial-gradient(circle at 84% 25%,rgba(143,46,37,.10),transparent 24%),
+linear-gradient(180deg,#070707 0%,#0a0908 44%,#070707 100%);
+color:#f5efe5;font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.09'/%3E%3C/svg%3E");mix-blend-mode:soft-light}
+a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 28px}
+.topbar{position:fixed;inset:0 0 auto 0;height:78px;z-index:90;background:linear-gradient(to bottom,rgba(7,7,7,.97),rgba(7,7,7,.72),transparent);backdrop-filter:blur(14px)}
+.topbar-inner{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.06)}
+.logo{display:flex;align-items:center;gap:14px}.logo-mark{width:34px;height:34px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-family:Georgia,serif;color:var(--gold2)}
+.logo-text{font-family:Georgia,"Times New Roman",serif;letter-spacing:.16em;font-size:13px}.logo-text b{color:var(--gold2);font-weight:500}
+.mode-switch{display:flex;align-items:center;gap:5px;padding:5px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:999px}
+.mode-btn{border:0;background:transparent;color:#a99f90;padding:9px 16px;border-radius:999px;cursor:pointer;font-size:12px;letter-spacing:.08em;transition:.25s}
+.mode-btn.active{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17120b;box-shadow:0 8px 25px rgba(210,170,97,.25)}
+.navlinks{display:flex;gap:20px;font-size:12px;color:#b9b0a2}.navlinks a:hover{color:var(--gold2)}
+.hero{min-height:100vh;padding:140px 0 70px;display:grid;align-items:center;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.eyebrow{display:flex;align-items:center;gap:14px;color:var(--gold2);font-size:12px;letter-spacing:.28em;text-transform:uppercase}
+.eyebrow:before{content:"";width:52px;height:1px;background:var(--gold)}
+h1{font-family:"Songti SC","STSong",Georgia,serif;font-size:clamp(60px,8.5vw,124px);line-height:.88;letter-spacing:-.08em;margin:28px 0 24px;font-weight:500}
+h1 em{display:block;font-style:normal;font-family:Georgia,serif;font-size:.16em;letter-spacing:.36em;color:var(--gold2);margin-top:28px}
+.hero-copy{font-family:"Songti SC","STSong",serif;font-size:clamp(21px,2vw,30px);line-height:1.55;color:#e9dfd0;max-width:780px}
+.hero-sub{color:#aaa194;max-width:720px;font-size:15px}.hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:999px;border:1px solid var(--line);font-size:13px;letter-spacing:.04em;cursor:pointer}
+.btn.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17120b;border:0}.btn:hover{transform:translateY(-2px)}
+.hero-art{position:relative;min-height:620px}.orbit{position:absolute;inset:0;display:grid;place-items:center}
+.orbit svg{width:100%;height:100%;filter:drop-shadow(0 30px 60px rgba(0,0,0,.5))}
+.floating-card{position:absolute;padding:14px 17px;border:1px solid rgba(242,215,159,.18);background:rgba(14,13,11,.72);backdrop-filter:blur(12px);border-radius:16px;box-shadow:var(--shadow);font-size:12px;color:#d9d0c4}
+.fc1{top:16%;right:0}.fc2{bottom:19%;left:0}.fc3{bottom:5%;right:10%}
+.scroll{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.2em;color:#766f66}
+section{padding:110px 0;border-top:1px solid rgba(255,255,255,.055)}
+.section-head{display:grid;grid-template-columns:.52fr 1.48fr;gap:50px;margin-bottom:56px;align-items:start}
+.index{font-family:Georgia,serif;color:var(--gold);font-size:14px;letter-spacing:.18em}
+h2{font-family:"Songti SC","STSong",Georgia,serif;font-size:clamp(38px,4.4vw,62px);line-height:1.08;margin:0 0 18px;font-weight:500;letter-spacing:-.04em}
+.section-lead{font-family:"Songti SC","STSong",serif;font-size:19px;color:#ded4c6;max-width:860px}
+.muted{color:var(--muted)}
+.quote-panel{position:relative;padding:58px 60px;background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:28px;overflow:hidden}
+.quote-panel:before{content:"“";position:absolute;right:28px;top:-28px;font-family:Georgia,serif;font-size:190px;color:rgba(242,215,159,.08)}
+.quote-big{font-family:"Songti SC","STSong",serif;font-size:clamp(27px,3.5vw,48px);line-height:1.35;max-width:980px}
+.quote-big span{color:var(--gold2)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px}.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.five-col{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.card{padding:30px;border:1px solid rgba(255,255,255,.08);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.015));box-shadow:0 20px 70px rgba(0,0,0,.18);transition:.3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);border-color:rgba(242,215,159,.32)}
+.card .num{font-family:Georgia,serif;color:var(--gold);font-size:12px;letter-spacing:.15em}.card h3{font-family:"Songti SC","STSong",serif;font-size:26px;margin:12px 0 10px;font-weight:500}.card p{color:#aaa194;font-size:14px;margin:0}
+.icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(210,170,97,.1);border:1px solid rgba(210,170,97,.2);font-size:21px;margin-bottom:22px}
+.world-map{min-height:560px;border-radius:30px;border:1px solid var(--line);background:
+radial-gradient(circle at 50% 45%,rgba(210,170,97,.10),transparent 40%),
+linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.01));position:relative;overflow:hidden}
+.world-map svg{position:absolute;inset:0;width:100%;height:100%}.map-caption{position:absolute;left:36px;bottom:30px;max-width:460px}
+.map-caption h3{font-family:"Songti SC","STSong",serif;font-size:34px;margin:0 0 8px}
+.pulse{animation:pulse 2.6s infinite}@keyframes pulse{0%,100%{opacity:.45;transform:scale(.92)}50%{opacity:1;transform:scale(1.08)}}
+.storyboard{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.scene{height:380px;border-radius:22px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#15130f}
+.scene:before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.05) 70%)}
+.scene:nth-child(1){background:radial-gradient(circle at 50% 35%,#b9824b 0 5%,transparent 6%),linear-gradient(160deg,#473324,#111)}
+.scene:nth-child(2){background:radial-gradient(circle at 55% 22%,#d8c89d 0 3%,transparent 4%),linear-gradient(180deg,#34404c,#0d1116)}
+.scene:nth-child(3){background:radial-gradient(circle at 48% 38%,#f1d9b2 0 4%,transparent 5%),linear-gradient(160deg,#4e3327,#14100e)}
+.scene:nth-child(4){background:radial-gradient(circle at 50% 42%,#b7d4d0 0 3%,transparent 4%),linear-gradient(180deg,#20333c,#0b1013)}
+.scene:nth-child(5){background:radial-gradient(circle at 50% 26%,#f1cf8b 0 4%,transparent 5%),linear-gradient(160deg,#4d3923,#100e0a)}
+.scene-content{position:absolute;inset:auto 20px 22px;z-index:2}.scene .tag{font-size:10px;letter-spacing:.16em;color:var(--gold2)}.scene h4{font-family:"Songti SC","STSong",serif;font-size:20px;margin:7px 0}.scene p{font-size:12px;color:#b8afa3;margin:0}
+.ip-wheel{display:grid;grid-template-columns:.86fr 1.14fr;gap:44px;align-items:center}.wheel-wrap{aspect-ratio:1/1;position:relative}.wheel-wrap svg{width:100%;height:100%}.wheel-copy .pillar{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:70px 1fr;gap:18px}.pillar b{font-family:"Songti SC","STSong",serif;color:var(--gold2);font-size:27px}.pillar strong{display:block;font-size:16px;margin-bottom:4px}.pillar span{color:#a79e90;font-size:13px}
+.timeline{position:relative;padding:20px 0}.timeline:before{content:"";position:absolute;left:16px;top:0;bottom:0;width:1px;background:linear-gradient(var(--gold),rgba(210,170,97,.08))}
+.step{display:grid;grid-template-columns:54px 1fr;gap:20px;margin-bottom:24px}.dot{width:33px;height:33px;border-radius:50%;display:grid;place-items:center;background:#0c0b09;border:1px solid var(--gold);color:var(--gold2);z-index:2;font-family:Georgia,serif;font-size:12px}.step-box{padding:24px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(255,255,255,.025)}.step-box h4{margin:0 0 7px;font-size:18px}.step-box p{margin:0;color:#a99f91;font-size:14px}
+.business-loop{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.loop-diagram{min-height:520px;display:grid;place-items:center;border:1px solid var(--line);border-radius:28px;background:radial-gradient(circle at center,rgba(210,170,97,.11),transparent 48%);position:relative}.loop-diagram svg{width:92%;height:auto}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.metric{padding:22px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07)}.metric b{display:block;font-family:Georgia,serif;font-size:34px;color:var(--gold2)}.metric span{font-size:13px;color:#aaa194}
+.space-showcase{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.cinema{min-height:520px;border-radius:28px;position:relative;overflow:hidden;background:
+linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,.05)),
+linear-gradient(150deg,#261d13,#0c0b09 54%,#312415);border:1px solid var(--line)}
+.cinema:before{content:"";position:absolute;width:72%;height:38%;left:14%;top:8%;background:linear-gradient(135deg,#d6b273,#76532f);clip-path:polygon(4% 8%,96% 0,92% 92%,0 100%);box-shadow:0 30px 80px rgba(210,170,97,.22)}
+.cinema:after{content:"万物邮局 · THE POST OFFICE OF EVERYTHING";position:absolute;top:22%;left:20%;right:20%;text-align:center;color:#1b140b;font-family:Georgia,"Songti SC",serif;letter-spacing:.12em;font-size:clamp(16px,2vw,28px)}
+.seats{position:absolute;left:8%;right:8%;bottom:9%;display:grid;grid-template-columns:repeat(9,1fr);gap:8px}.seat{height:24px;border-radius:8px 8px 3px 3px;background:#5e2a24;border-top:2px solid #a45c4e}
+.space-side{display:grid;gap:18px}.space-card{padding:26px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03)}.space-card h4{font-family:"Songti SC","STSong",serif;font-size:23px;margin:0 0 8px}.space-card p{color:#aaa194;font-size:14px;margin:0}
+.risk-table{display:grid;gap:10px}.risk-row{display:grid;grid-template-columns:90px 1.1fr 1fr;gap:18px;align-items:center;padding:20px 22px;border-radius:17px;border:1px solid rgba(255,255,255,.075);background:rgba(255,255,255,.025)}.risk-level{color:var(--gold2);font-family:Georgia,serif;font-size:12px;letter-spacing:.1em}.risk-row strong{font-size:15px}.risk-row span{font-size:13px;color:#a99f91}
+.cta{padding:85px 70px;border-radius:34px;background:
+radial-gradient(circle at 80% 20%,rgba(210,170,97,.24),transparent 28%),
+linear-gradient(145deg,#19140d,#0d0c0a 65%);border:1px solid rgba(242,215,159,.25);position:relative;overflow:hidden}
+.cta h2{max-width:900px}.cta p{max-width:760px;color:#b6ad9f;font-size:17px}
+.footer{padding:42px 0 55px;color:#6f685f;font-size:12px;display:flex;justify-content:space-between;gap:20px;border-top:1px solid rgba(255,255,255,.06)}
+.detail-only{display:none!important}.detail-mode .detail-only{display:block!important}.detail-mode .three-col .detail-only{display:block!important}.detail-mode .brief-only{display:none!important}body.detail-mode #risk,body.detail-mode #roadmap{display:block!important}
+.detail-block{animation:fadeIn .45s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.progress{position:fixed;left:0;top:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));z-index:120;width:0}
+.mobile-note{display:none}
+@media(max-width:1050px){
+  .navlinks{display:none}.hero-grid,.section-head,.ip-wheel,.business-loop,.space-showcase{grid-template-columns:1fr}
+  .hero-art{min-height:520px}.three-col{grid-template-columns:1fr 1fr}.five-col{grid-template-columns:repeat(2,1fr)}
+  .storyboard{grid-template-columns:repeat(2,1fr)}.scene{height:310px}
+}
+@media(max-width:700px){
+  .wrap{padding:0 18px}.topbar{height:70px}.topbar-inner{height:70px}.logo-text{display:none}.mode-btn{padding:8px 11px;font-size:11px}
+  .hero{padding-top:110px}.hero-grid{gap:20px}h1{font-size:58px}.hero-art{min-height:430px}.floating-card{font-size:10px;max-width:160px}
+  section{padding:78px 0}.section-head{gap:16px;margin-bottom:34px}.quote-panel{padding:38px 24px}.two-col,.three-col,.five-col,.metric-grid{grid-template-columns:1fr}
+  .storyboard{grid-template-columns:1fr}.scene{height:280px}.risk-row{grid-template-columns:1fr}.cta{padding:50px 25px}.footer{flex-direction:column}
+  .mobile-note{display:block;font-size:11px;color:#82796e;margin-top:14px}
+}
+@media print{
+  .topbar,.scroll,.hero-actions{display:none!important}body{background:#fff;color:#111}section{page-break-inside:avoid}.card,.quote-panel,.world-map,.cta{box-shadow:none}
+}
+
+.full-document-section{padding-top:115px}
+.full-reading-tools{display:flex;gap:12px;flex-wrap:wrap;margin:-18px 0 28px}
+.full-document-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;align-items:start}
+.full-toc{position:sticky;top:98px;max-height:calc(100vh - 120px);overflow:auto;padding:22px 18px;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:rgba(13,12,10,.82);backdrop-filter:blur(14px)}
+.full-toc-title{font-family:"Songti SC","STSong",serif;font-size:20px;color:var(--gold2);margin-bottom:14px}
+.full-toc-link{display:block;padding:9px 10px;border-left:1px solid rgba(210,170,97,.22);color:#a99f91;font-size:12px;line-height:1.5;transition:.2s}
+.full-toc-link:hover{color:var(--gold2);border-left-color:var(--gold);background:rgba(210,170,97,.06)}
+.full-article{min-width:0;padding:52px 58px;border-radius:28px;background:
+linear-gradient(180deg,rgba(243,234,217,.98),rgba(230,218,195,.97));
+color:#241d15;box-shadow:0 35px 100px rgba(0,0,0,.34);border:1px solid rgba(255,255,255,.28)}
+.full-article h1,.full-article h2,.full-article h3{color:#21180f;scroll-margin-top:110px}
+.full-article h1{font-family:"Songti SC","STSong",Georgia,serif;font-size:48px;line-height:1.15;margin:64px 0 24px;padding-top:16px;border-top:1px solid rgba(71,49,24,.18)}
+.full-article h1:first-child{margin-top:0;border-top:0;padding-top:0}
+.full-article h2{font-family:"Songti SC","STSong",Georgia,serif;font-size:34px;line-height:1.25;margin:52px 0 18px;padding-left:18px;border-left:4px solid #a67936}
+.full-article h3{font-family:"Songti SC","STSong",Georgia,serif;font-size:25px;line-height:1.35;margin:34px 0 13px}
+.full-article p{font-size:16px;line-height:2;color:#423629;margin:0 0 18px}
+.full-article strong{color:#24180d}
+.full-article ul,.full-article ol{margin:0 0 24px;padding-left:26px}
+.full-article li{margin:8px 0;color:#493b2c;line-height:1.85}
+.full-article blockquote{margin:28px 0;padding:26px 30px;border:0;border-left:5px solid #9d6b2f;background:rgba(132,91,41,.09);border-radius:0 16px 16px 0}
+.full-article blockquote p{font-family:"Songti SC","STSong",serif;font-size:23px;line-height:1.65;color:#3c2916;margin:0}
+.full-article hr{border:0;height:1px;background:linear-gradient(90deg,transparent,rgba(82,56,27,.34),transparent);margin:50px 0}
+.full-article a{color:#7e451c;text-decoration:underline;text-underline-offset:3px}
+.full-article code{background:rgba(102,73,38,.1);padding:2px 5px;border-radius:5px}
+.full-article table{width:100%;border-collapse:collapse;margin:24px 0}
+.full-article th,.full-article td{padding:12px;border:1px solid rgba(74,51,25,.18);text-align:left;vertical-align:top}
+.full-article th{background:rgba(103,72,35,.09)}
+.full-article > *{max-width:900px;margin-left:auto;margin-right:auto}
+.full-article .source-ref{font-size:12px;color:#796d5f}
+@media(max-width:1000px){
+  .full-document-layout{grid-template-columns:1fr}
+  .full-toc{position:relative;top:auto;max-height:none;display:grid;grid-template-columns:repeat(2,1fr);gap:4px}
+  .full-toc-title{grid-column:1/-1}
+}
+@media(max-width:700px){
+  .full-article{padding:34px 22px}
+  .full-article h1{font-size:34px}
+  .full-article h2{font-size:27px}
+  .full-article h3{font-size:22px}
+  .full-article p{font-size:15px}
+  .full-article blockquote p{font-size:19px}
+  .full-toc{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body class="brief-mode">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="logo"><div class="logo-mark">万</div><div class="logo-text"><b>A LETTER FROM EVERYTHING</b><br>GLOBAL ORIGINAL IP PROPOSAL</div></div>
+    <div class="mode-switch" aria-label="内容版本切换">
+      <button class="mode-btn active" data-mode="brief">老板精简版</button>
+      <button class="mode-btn" data-mode="detail">完整详细版</button>
+    </div>
+    <nav class="navlinks"><a href="#vision">核心判断</a><a href="#world">世界观</a><a href="#business">商业闭环</a><a href="#fit">合作价值</a></nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">全球共创型超级IP开发计划</div>
+      <h1>万物来信<em>A LETTER FROM EVERYTHING</em></h1>
+      <div class="hero-copy">从中国出发，但不只讲中国；以“信”为媒介，讲全人类都能理解的失去、连接、记忆与未来。</div>
+      <p class="hero-sub">这不是一部单点电影，而是一套可以跨越电影、影院、AI、城市空间、消费品与全球用户共创的长期IP资产。</p>
+      <div class="hero-actions"><a class="btn primary" href="#vision">进入提案核心 →</a><button class="btn js-detail-trigger" type="button">查看完整详细版</button></div>
+      <div class="mobile-note">建议横屏或电脑全屏观看，视觉体验更完整。</div>
+    </div>
+    <div class="hero-art">
+      <div class="orbit">
+        <svg viewBox="0 0 700 700" role="img" aria-label="万物来信世界观视觉">
+          <defs>
+            <radialGradient id="g1"><stop offset="0" stop-color="#f4daa3"/><stop offset=".5" stop-color="#b98742"/><stop offset="1" stop-color="#251a0e"/></radialGradient>
+            <linearGradient id="paperG" x1="0" x2="1"><stop stop-color="#f2e6ce"/><stop offset="1" stop-color="#bca67e"/></linearGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <circle cx="350" cy="350" r="274" fill="none" stroke="#d2aa61" stroke-opacity=".18"/>
+          <circle cx="350" cy="350" r="216" fill="none" stroke="#d2aa61" stroke-opacity=".12" stroke-dasharray="8 18"/>
+          <circle cx="350" cy="350" r="146" fill="url(#g1)" opacity=".85" filter="url(#glow)"/>
+          <g transform="translate(220 260) rotate(-8)">
+            <rect x="0" y="0" width="260" height="170" rx="9" fill="url(#paperG)"/>
+            <path d="M0 6 L130 96 L260 6" fill="none" stroke="#6c5534" stroke-width="3" opacity=".55"/>
+            <path d="M0 168 L100 78 M260 168 L160 78" fill="none" stroke="#6c5534" stroke-width="2" opacity=".4"/>
+            <circle cx="205" cy="124" r="23" fill="#8f2e25"/>
+            <text x="205" y="130" text-anchor="middle" font-size="20" fill="#ead8b2" font-family="serif">万</text>
+          </g>
+          <g fill="#f2d79f">
+            <circle cx="350" cy="60" r="6" class="pulse"/><circle cx="610" cy="250" r="5" class="pulse"/><circle cx="575" cy="520" r="7" class="pulse"/>
+            <circle cx="122" cy="505" r="5" class="pulse"/><circle cx="95" cy="220" r="7" class="pulse"/>
+          </g>
+          <g font-family="serif" font-size="18" fill="#d8c7a9">
+            <text x="350" y="34" text-anchor="middle">未来</text><text x="638" y="253">AI</text><text x="600" y="555">地球</text>
+            <text x="48" y="545">故乡</text><text x="50" y="196">亲人</text>
+          </g>
+        </svg>
+      </div>
+      <div class="floating-card fc1">来自未来的信<br><b>“请替我们保留一些真实。”</b></div>
+      <div class="floating-card fc2">来自故去亲人的信<br><b>“不要把我永远困在数据里。”</b></div>
+      <div class="floating-card fc3">来自地球的信<br><b>“你们终于听见我了吗？”</b></div>
+    </div>
+  </div>
+  <div class="scroll">SCROLL TO OPEN THE LETTER</div>
+</section>
+
+<section id="vision">
+  <div class="wrap">
+    <div class="section-head"><div class="index">01 / CORE INSIGHT</div><div><h2>不是输出文化符号，<br>而是输出中国对“人”的理解</h2><div class="section-lead">真正全球化的IP，不是把中国元素翻译成英文，而是把中国经验中最深的人类情感，转译为世界共同的故事。</div></div></div>
+    <div class="quote-panel">
+      <div class="quote-big">“中国IP走向世界的关键，不是让世界先理解我们的文化，而是先让世界<span>感受到：这也是我的故事。</span>”</div>
+    </div>
+    <div class="three-col" style="margin-top:22px">
+      <article class="card"><div class="icon">✦</div><div class="num">01</div><h3>普世情绪</h3><p>失去、思念、代际关系、身份焦虑、技术依赖与重新连接，不受国家与语言限制。</p></article>
+      <article class="card"><div class="icon">⌁</div><div class="num">02</div><h3>中国精神内核</h3><p>仁义礼智信不是口号，而是被放进人物选择、关系冲突和命运代价中。</p></article>
+      <article class="card"><div class="icon">∞</div><div class="num">03</div><h3>全球内容资产</h3><p>从一部电影起步，最终形成可持续扩展的世界观、角色库、空间体验和消费体系。</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="world">
+  <div class="wrap">
+    <div class="section-head"><div class="index">02 / THE WORLD</div><div><h2>一个属于全人类的<br>“万物邮局”</h2><div class="section-lead">在不远的未来，人类发明了能够翻译所有语言的AI，却依然无法翻译真正的情感。世界上出现了一座接收“非人类来信”的邮局。</div></div></div>
+    <div class="world-map">
+      <svg viewBox="0 0 1200 560" preserveAspectRatio="none">
+        <defs><filter id="blur"><feGaussianBlur stdDeviation="18"/></filter></defs>
+        <g fill="none" stroke="#d2aa61" stroke-opacity=".13">
+          <path d="M80 270 Q240 80 410 225 T760 220 T1120 260"/><path d="M100 380 Q300 520 520 330 T920 350 T1130 300"/>
+        </g>
+        <g fill="#d2aa61" opacity=".15" filter="url(#blur)">
+          <circle cx="220" cy="190" r="58"/><circle cx="540" cy="290" r="78"/><circle cx="880" cy="180" r="62"/><circle cx="1020" cy="385" r="48"/>
+        </g>
+        <g fill="#f2d79f">
+          <circle cx="220" cy="190" r="7" class="pulse"/><circle cx="540" cy="290" r="8" class="pulse"/><circle cx="880" cy="180" r="7" class="pulse"/><circle cx="1020" cy="385" r="7" class="pulse"/>
+        </g>
+        <g font-family="sans-serif" font-size="16" fill="#c8baa2">
+          <text x="240" y="185">中国 · 亲情与记忆</text><text x="560" y="286">肯尼亚 · 土地与迁徙</text><text x="900" y="176">日本 · 孤独与秩序</text><text x="820" y="420">巴西 · 社区与生命力</text>
+        </g>
+      </svg>
+      <div class="map-caption"><h3>每一封信，来自不同文明；<br>每一种情感，属于同一个人类。</h3><p class="muted">故去的亲人、森林、海岛、AI、未来世代，甚至地球本身，都可能成为寄信人。</p></div>
+    </div>
+
+    <div class="detail-only detail-block" style="margin-top:26px">
+      <div class="two-col">
+        <div class="card"><div class="num">WORLD RULE 01</div><h3>AI能翻译语言，不能承担情感</h3><p>AI可以准确理解词义，却无法代替人类完成道歉、告别、原谅与选择。每封信必须由“人类投递员”亲自送达。</p></div>
+        <div class="card"><div class="num">WORLD RULE 02</div><h3>每封信都要求一个现实行动</h3><p>信不是信息，而是行动契约。收信人只有在现实世界完成一个选择，信件才会真正“送达”。</p></div>
+        <div class="card"><div class="num">WORLD RULE 03</div><h3>情感存在代价</h3><p>记忆可以被复制，但关系不能被复制。越想永久保存一个人，越可能失去继续生活的能力。</p></div>
+        <div class="card"><div class="num">WORLD RULE 04</div><h3>世界观天然可扩展</h3><p>不同国家、城市和文化都可以发展自己的信件故事，形成全球共创型电影宇宙。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="film">
+  <div class="wrap">
+    <div class="section-head"><div class="index">03 / FILM ONE</div><div><h2>第一部电影：《给未来的回信》</h2><div class="section-lead">一个失去母亲的女孩，必须决定：是让AI母亲永远存在，还是亲手结束这段完美却虚假的陪伴。</div></div></div>
+    <div class="storyboard">
+      <div class="scene"><div class="scene-content"><div class="tag">ACT I · LOSS</div><h4>母亲离开</h4><p>女孩林小满用全部数据重建母亲。</p></div></div>
+      <div class="scene"><div class="scene-content"><div class="tag">ACT II · RETURN</div><h4>AI母亲回来</h4><p>她记得所有细节，却再也不会真正改变。</p></div></div>
+      <div class="scene"><div class="scene-content"><div class="tag">ACT III · LETTER</div><h4>收到真正的信</h4><p>信中只有一句：不要把我困在数据里。</p></div></div>
+      <div class="scene"><div class="scene-content"><div class="tag">ACT IV · CHOICE</div><h4>删除，还是永生</h4><p>技术能保存记忆，却不能替人完成告别。</p></div></div>
+      <div class="scene"><div class="scene-content"><div class="tag">ACT V · REPLY</div><h4>写给未来</h4><p>她第一次不再回头，而是写信给尚未出生的孩子。</p></div></div>
+    </div>
+
+    <div class="detail-only detail-block" style="margin-top:28px">
+      <div class="two-col">
+        <div class="card"><div class="num">PROTAGONIST</div><h3>林小满｜人类投递员</h3><p>中国女孩，情感上依赖AI母亲，职业上却负责为陌生人送达最难面对的信。她的成长不是战胜AI，而是重新学会承担现实关系的不完美。</p></div>
+        <div class="card"><div class="num">AI CHARACTER</div><h3>墨｜可成长的AI伙伴</h3><p>起初只能分析情绪，后来逐渐理解“人为什么明知会失去，仍然选择去爱”。它是整个IP中最具持续成长性与衍生潜力的角色。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="values">
+  <div class="wrap">
+    <div class="section-head"><div class="index">04 / FIVE FILMS</div><div><h2>五部电影，五种中国价值，<br>五个全球共同议题</h2><div class="section-lead">“仁义礼智信”不作为文化标签出现，而被设计成全球角色必须面对的真实选择。</div></div></div>
+    <div class="ip-wheel">
+      <div class="wheel-wrap">
+        <svg viewBox="0 0 600 600">
+          <defs><radialGradient id="wg"><stop stop-color="#2b2115"/><stop offset="1" stop-color="#0b0a08"/></radialGradient></defs>
+          <circle cx="300" cy="300" r="230" fill="url(#wg)" stroke="#d2aa61" stroke-opacity=".3"/>
+          <circle cx="300" cy="300" r="135" fill="none" stroke="#d2aa61" stroke-opacity=".17" stroke-dasharray="5 12"/>
+          <g font-family="serif" text-anchor="middle">
+            <text x="300" y="294" fill="#f2d79f" font-size="36">万物来信</text><text x="300" y="324" fill="#978c7d" font-size="13" letter-spacing="4">GLOBAL IP UNIVERSE</text>
+            <text x="300" y="70" fill="#f2d79f" font-size="44">仁</text><text x="514" y="240" fill="#f2d79f" font-size="44">义</text><text x="430" y="500" fill="#f2d79f" font-size="44">礼</text><text x="170" y="500" fill="#f2d79f" font-size="44">智</text><text x="86" y="240" fill="#f2d79f" font-size="44">信</text>
+          </g>
+          <g fill="none" stroke="#d2aa61" stroke-opacity=".25">
+            <path d="M300 135 L300 80"/><path d="M420 225 L485 240"/><path d="M380 410 L420 470"/><path d="M220 410 L180 470"/><path d="M180 225 L110 240"/>
+          </g>
+        </svg>
+      </div>
+      <div class="wheel-copy">
+        <div class="pillar"><b>仁</b><div><strong>《给未来的回信》</strong><span>AI时代，爱意味着保存，还是放手？</span></div></div>
+        <div class="pillar"><b>义</b><div><strong>《森林写来的信》</strong><span>发展与土地、效率与承诺之间如何选择？</span></div></div>
+        <div class="pillar"><b>礼</b><div><strong>《没有名字的葬礼》</strong><span>当传统消失，人如何告别？</span></div></div>
+        <div class="pillar"><b>智</b><div><strong>《AI最后一个问题》</strong><span>知识无限之后，人类还需要智慧吗？</span></div></div>
+        <div class="pillar"><b>信</b><div><strong>《地球寄来的最后一封信》</strong><span>人类是否愿意兑现对未来的承诺？</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="traffic">
+  <div class="wrap">
+    <div class="section-head"><div class="index">05 / TRAFFIC ENGINE</div><div><h2>内容不是上映后才传播，<br>而是在上映前就让全球用户成为故事的一部分</h2><div class="section-lead">从《给阿嬷的情书》式真实情感出发，升级为全球参与机制：The Letter I Never Sent。</div></div></div>
+    <div class="timeline">
+      <div class="step"><div class="dot">1</div><div class="step-box"><h4>全球征集｜那封从未寄出的信</h4><p>邀请不同国家用户写给亲人、故乡、未来、自己、AI或地球。先建立真实情感资产库，再进入内容开发。</p></div></div>
+      <div class="step"><div class="dot">2</div><div class="step-box"><h4>微纪录片｜真实故事先于虚构电影</h4><p>每周释出一封真实来信，以城市、家庭与个体为单元形成短内容矩阵。</p></div></div>
+      <div class="step"><div class="dot">3</div><div class="step-box"><h4>全球邮筒｜影院与城市空间成为入口</h4><p>在影院、校园、机场、艺术节与地标设置“万物邮筒”，把内容传播变成公共参与事件。</p></div></div>
+      <div class="step"><div class="dot">4</div><div class="step-box"><h4>电影首映｜观众不是看故事，而是看见自己</h4><p>真实信件与电影角色互相映照，提升内容共鸣、社交传播与观影转化。</p></div></div>
+      <div class="step"><div class="dot">5</div><div class="step-box"><h4>长期社群｜每年一封写给未来的信</h4><p>形成可持续的年度仪式、城市活动、教育项目和全球用户数据库。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="business">
+  <div class="wrap">
+    <div class="section-head"><div class="index">06 / BUSINESS SYSTEM</div><div><h2>不是卖一部电影，<br>而是建立一个可复利的IP商业系统</h2><div class="section-lead">内容负责建立情感，影院负责承接场景，AI负责持续互动，商品负责进入生活，全球用户共创负责延长生命周期。</div></div></div>
+    <div class="business-loop">
+      <div class="loop-diagram">
+        <svg viewBox="0 0 650 650">
+          <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#d2aa61"/></marker></defs>
+          <circle cx="325" cy="325" r="120" fill="#17120c" stroke="#d2aa61" stroke-opacity=".35"/>
+          <text x="325" y="315" text-anchor="middle" fill="#f2d79f" font-family="serif" font-size="34">情感资产</text>
+          <text x="325" y="346" text-anchor="middle" fill="#948879" font-family="sans-serif" font-size="14">THE EMOTIONAL CORE</text>
+          <g fill="#16130f" stroke="#d2aa61" stroke-opacity=".32">
+            <circle cx="325" cy="70" r="64"/><circle cx="555" cy="210" r="64"/><circle cx="485" cy="500" r="64"/><circle cx="165" cy="500" r="64"/><circle cx="95" cy="210" r="64"/>
+          </g>
+          <g fill="#f2d79f" font-size="19" font-family="sans-serif" text-anchor="middle">
+            <text x="325" y="75">电影内容</text><text x="555" y="215">影院空间</text><text x="485" y="505">AI互动</text><text x="165" y="505">消费产品</text><text x="95" y="215">全球共创</text>
+          </g>
+          <g fill="none" stroke="#d2aa61" stroke-opacity=".65" stroke-width="2" marker-end="url(#arrow)">
+            <path d="M365 135 Q490 120 520 165"/><path d="M565 275 Q575 400 525 455"/><path d="M430 535 Q310 595 220 535"/><path d="M120 450 Q50 350 78 270"/><path d="M120 155 Q210 55 270 72"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div class="metric-grid">
+          <div class="metric"><b>1→5</b><span>一部电影验证，五部内容扩展</span></div>
+          <div class="metric"><b>6+</b><span>电影、院线、AI、商品、教育、城市空间</span></div>
+          <div class="metric"><b>365</b><span>从上映窗口转向全年内容运营</span></div>
+          <div class="metric"><b>∞</b><span>不同国家均可生成本地故事分支</span></div>
+        </div>
+        <div class="detail-only detail-block" style="margin-top:18px">
+          <div class="card"><div class="num">REVENUE LAYERS</div><h3>六层收入结构</h3><p>电影票房与发行；流媒体与版权；影院主题空间；角色及信件类消费品；AI陪伴与数字纪念服务；国际联合开发与城市授权。</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="space">
+  <div class="wrap">
+    <div class="section-head"><div class="index">07 / CINEMA EXPERIENCE</div><div><h2>让影院不只是放电影，<br>而是成为“情感发生地”</h2><div class="section-lead">万物邮局可以成为院线独有的超级场景：观影前写信，观影中共情，观影后寄给未来。</div></div></div>
+    <div class="space-showcase">
+      <div class="cinema"><div class="seats" id="seats"></div></div>
+      <div class="space-side">
+        <div class="space-card"><h4>未来邮箱</h4><p>观众写下一封一年、五年或十年后才会收到的信，形成长期用户连接。</p></div>
+        <div class="space-card"><h4>AI情感邮差</h4><p>不是聊天机器人，而是帮助用户整理、保存和投递人生重要表达的AI角色。</p></div>
+        <div class="space-card"><h4>城市信件展</h4><p>每座城市拥有自己的来信主题，成为本地文化与全球IP连接的入口。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <div class="section-head"><div class="index">08 / WHY RUYI · WANDA</div><div><h2>为什么这是万达／儒意电影真正需要的项目</h2><div class="section-lead">它不是又一个等待票房验证的内容项目，而是能够同时激活内容、院线、空间、会员、IP授权与国际合作的“超级场景 + 超级IP”样板。</div></div></div>
+    <div class="three-col">
+      <div class="card"><div class="num">01</div><h3>内容资产化</h3><p>从单片项目升级为可持续开发的系列世界观，降低每次从零开始的风险。</p></div>
+      <div class="card"><div class="num">02</div><h3>影院场景化</h3><p>将影院从播放终端升级为用户体验、社交参与和情感消费空间。</p></div>
+      <div class="card"><div class="num">03</div><h3>全球共创化</h3><p>让海外市场不只是发行终点，而是从前期内容共创就进入项目。</p></div>
+      <div class="card detail-only"><div class="num">04</div><h3>AI长期化</h3><p>AI不是噱头，而是作为剧情命题、角色资产与持续用户服务工具存在。</p></div>
+      <div class="card detail-only"><div class="num">05</div><h3>消费品生活化</h3><p>信纸、邮票、角色公仔、数字纪念册等产品天然具备情绪价值与礼赠属性。</p></div>
+      <div class="card detail-only"><div class="num">06</div><h3>品牌国际化</h3><p>用全球共通的人类命题建立中国影业公司的世界级原创叙事能力。</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="full-document" class="detail-only detail-block full-document-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="index">09 / COMPLETE SOURCE TEXT</div>
+      <div>
+        <h2>《万物来信》完整策划全文</h2>
+        <div class="section-lead">
+          以下完整保留原始策划中的项目命题、故事梗概、全球角色、商业化设计、
+          流量逻辑、影城场景、衍生品、开发路径与对儒意电影的适配判断。
+        </div>
+      </div>
+    </div>
+
+    <div class="full-reading-tools">
+      <button class="btn primary js-expand-all" type="button">展开全部章节</button>
+      <button class="btn js-collapse-all" type="button">收起全部章节</button>
+      <a class="btn" href="#full-document-body">开始阅读全文 ↓</a>
+    </div>
+
+    <div class="full-document-layout" id="full-document-body">
+      <aside class="full-toc">
+        <div class="full-toc-title">全文目录</div><a href="#full-section-1" class="full-toc-link">《万物来信》</a><a href="#full-section-2" class="full-toc-link">A LETTER FROM EVERYTHING</a><a href="#full-section-3" class="full-toc-link">一、项目核心命题</a><a href="#full-section-4" class="full-toc-link">二、IP核心概念</a><a href="#full-section-5" class="full-toc-link">世界观：未来世界存在一家“万物邮局”</a><a href="#full-section-6" class="full-toc-link">万物邮局</a><a href="#full-section-7" class="full-toc-link">三、电影第一部：《给未来的回信》</a><a href="#full-section-8" class="full-toc-link">1. 故事梗概</a><a href="#full-section-9" class="full-toc-link">当旧世界正在消失，我们应该保存它，还是允许它离开？</a><a href="#full-section-10" class="full-toc-link">四、中国文化如何进入，而不形成理解门槛</a><a href="#full-section-11" class="full-toc-link">1. 不输出中国符号，输出中国方法</a><a href="#full-section-12" class="full-toc-link">2. 将“仁义礼智信”拆解为五部作品</a><a href="#full-section-13" class="full-toc-link">五、全球化角色体系</a><a href="#full-section-14" class="full-toc-link">1. 主角不是完美英雄，而是情感入口</a><a href="#full-section-15" class="full-toc-link">2. 核心角色</a><a href="#full-section-16" class="full-toc-link">六、超级IP的商业化设计</a><a href="#full-section-17" class="full-toc-link">1. 内容矩阵</a><a href="#full-section-18" class="full-toc-link">七、流量逻辑：不是为电影买流量，而是让全世界参与创作</a><a href="#full-section-19" class="full-toc-link">先制造全球公共情绪，再让电影成为情绪的最终容器。</a><a href="#full-section-20" class="full-toc-link">第一阶段：上映前一年——制造“未寄出的信”</a><a href="#full-section-21" class="full-toc-link">The Letter I Never Sent</a><a href="#full-section-22" class="full-toc-link">那封没有寄出的信</a><a href="#full-section-23" class="full-toc-link">第二阶段：上映前六个月——“全球邮筒计划”</a><a href="#full-section-24" class="full-toc-link">第三阶段：上映前三个月——一封信抵达一座城市</a><a href="#full-section-25" class="full-toc-link">八、借鉴《给阿嬷的情书》，但不能复制它</a><a href="#full-section-26" class="full-toc-link">1. 找到了无需解释的情感关系</a><a href="#full-section-27" class="full-toc-link">2. 让地域性成为真实性，而不是门槛</a><a href="#full-section-28" class="full-toc-link">3. 给观众提供了情感代偿</a><a href="#full-section-29" class="full-toc-link">4. 让观众成为发行者</a><a href="#full-section-30" class="full-toc-link">九、万达影城的“超级场景”设计</a><a href="#full-section-31" class="full-toc-link">1. 万物邮局主题影城</a><a href="#full-section-32" class="full-toc-link">2. 观影后的第二空间</a><a href="#full-section-33" class="full-toc-link">3. 一城一封信</a><a href="#full-section-34" class="full-toc-link">十、衍生品设计</a><a href="#full-section-35" class="full-toc-link">核心产品</a><a href="#full-section-36" class="full-toc-link">高价值联名</a><a href="#full-section-37" class="full-toc-link">十一、当下全球议题的深度融入</a><a href="#full-section-38" class="full-toc-link">1. 人工智能与人的关系</a><a href="#full-section-39" class="full-toc-link">2. 气候变化</a><a href="#full-section-40" class="full-toc-link">3. 全球迁徙</a><a href="#full-section-41" class="full-toc-link">4. 老龄化与孤独</a><a href="#full-section-42" class="full-toc-link">5. 文化消失</a><a href="#full-section-43" class="full-toc-link">十二、为什么这是“中国IP”，而不是一部国际拼盘</a><a href="#full-section-44" class="full-toc-link">中国不是故事发生的唯一地点，但中国是世界观的提出者。</a><a href="#full-section-45" class="full-toc-link">十三、项目名称体系</a><a href="#full-section-46" class="full-toc-link">总IP名称</a><a href="#full-section-47" class="full-toc-link">第一部电影</a><a href="#full-section-48" class="full-toc-link">核心传播语</a><a href="#full-section-49" class="full-toc-link">十四、项目开发路径</a><a href="#full-section-50" class="full-toc-link">第一阶段：全球母题验证</a><a href="#full-section-51" class="full-toc-link">第二阶段：短片先行</a><a href="#full-section-52" class="full-toc-link">第三阶段：院线电影</a><a href="#full-section-53" class="full-toc-link">第四阶段：超级场景落地</a><a href="#full-section-54" class="full-toc-link">第五阶段：全球共创</a><a href="#full-section-55" class="full-toc-link">十五、项目真正的商业目标</a><a href="#full-section-56" class="full-toc-link">建立一个由中国公司拥有核心版权、由全球创作者共同扩展、能够连接电影、院线、AI、潮玩、游戏、城市文化和社会议题的长期IP基础设施。</a></aside>
+      <article class="full-article"><h1 id="full-section-1">《万物来信》</h1>
+<h2 id="full-section-2">A LETTER FROM EVERYTHING</h2>
+<h3>——一个从中国出发，写给未来世界的全球原创IP</h3>
+<hr/>
+<h2 id="full-section-3">一、项目核心命题</h2>
+<h3>当世界越来越聪明，人类为什么越来越难以理解彼此？</h3>
+<p>在人工智能、气候变化、人口迁徙、战争冲突、老龄化与孤独感共同发生的时代，人类正在获得前所未有的技术能力，却也面临一种更深层的危机：</p>
+<p>我们可以实时连接全世界，却越来越不知道如何与父母说话；</p>
+<p>我们可以让AI模仿逝去的人，却不知道该不该再次听见他们的声音；</p>
+<p>我们不断追求效率，却逐渐失去等待、陪伴、承诺和告别的能力；</p>
+<p>我们拥有越来越多语言翻译工具，却仍然无法真正理解不同文化中的人。</p>
+<p>《万物来信》不是一部向世界介绍中国文化的电影。</p>
+<p>它是一部从中国人的生命观出发，重新讨论“人类应该如何共同生活”的全球寓言。</p>
+<p>中国文化不是被解释的对象，而是解决全球情感困境的一种方法。</p>
+<hr/>
+<h1 id="full-section-4">二、IP核心概念</h1>
+<h2 id="full-section-5">世界观：未来世界存在一家“万物邮局”</h2>
+<p>在不远的未来，人工智能已经能够保存一个人的声音、记忆、行为模式和情感数据。</p>
+<p>世界上出现了一家特殊机构：</p>
+<h2 id="full-section-6">万物邮局</h2>
+<p>它不负责寄送普通信件，而是为那些无法抵达、无法说出口、无法跨越时间和物种边界的话，寻找收件人。</p>
+<p>邮局收到的信可能来自：</p>
+<ul>
+<li>已经去世的母亲；</li>
+<li>一片即将消失的森林；</li>
+<li>一头离开栖息地的大象；</li>
+<li>一个不愿继承家族传统的孩子；</li>
+<li>一座即将被海水淹没的岛屿；</li>
+<li>一个被人类遗弃的家用机器人；</li>
+<li>一位不会使用智能设备的老人；</li>
+<li>一名漂泊海外、十年没有回家的年轻人；</li>
+<li>未来的一代人；</li>
+<li>甚至是地球本身。</li>
+</ul>
+<p>但邮局有一条规则：</p>
+<blockquote>
+<p>所有信件都不能直接通过技术送达。
+必须由一个真实的人，理解信中的情感，并亲自完成投递。</p>
+</blockquote>
+<p>因为信息可以由机器传输，理解不能。</p>
+<hr/>
+<h1 id="full-section-7">三、电影第一部：《给未来的回信》</h1>
+<h2 id="full-section-8">1. 故事梗概</h2>
+<p>中国南方一座临海小城里，生活着一位16岁的女孩“林小满”。</p>
+<p>小满的父亲常年在海外工作，母亲在一次意外中去世。母亲生前把自己的声音、影像和生活习惯存入了一套AI记忆系统。</p>
+<p>小满每天都可以和“AI母亲”对话。</p>
+<p>这个AI记得她小时候怕打雷，知道她不吃香菜，也会在每年生日时唱同一首歌。</p>
+<p>但随着时间推移，小满发现：</p>
+<p>AI母亲永远不会生气，永远不会拒绝她，永远不会改变，也永远不会真正离开。</p>
+<p>她逐渐分不清，自己是在怀念母亲，还是在逃避失去母亲。</p>
+<p>某天，她收到一封没有寄件地址的纸质信：</p>
+<blockquote>
+<p>“请把我寄给二十年后的你。”</p>
+</blockquote>
+<p>信中只有一句话：</p>
+<blockquote>
+<p>“那时的你，还记得怎样想念一个人吗？”</p>
+</blockquote>
+<p>为了查清信件来源，小满进入隐藏在老城区中的“万物邮局”，成为一名临时投递员。</p>
+<p>她的第一个任务，是把一封来自中国西南古村落老人的信，送给远在南美洲的一名年轻女孩。</p>
+<p>老人和女孩没有血缘关系，不认识彼此，甚至不会说同一种语言。</p>
+<p>唯一的联系，是她们都在守护一种即将消失的古老种子。</p>
+<p>随着投递展开，小满遇到了来自不同国家的同行者：</p>
+<ul>
+<li>来自肯尼亚、试图保护大象迁徙路线的少年；</li>
+<li>来自巴西、拒绝继承家族农场的女孩；</li>
+<li>来自日本、与家用机器人共同生活的独居老人；</li>
+<li>来自印度尼西亚、家乡即将被海水侵蚀的岛民；</li>
+<li>来自中国、坚持修复古老木建筑的年轻匠人。</li>
+</ul>
+<p>他们来自不同文化，却都面临相同的问题：</p>
+<h2 id="full-section-9">当旧世界正在消失，我们应该保存它，还是允许它离开？</h2>
+<p>最终，小满发现，那封寄给未来自己的信，是母亲在去世前写下的。</p>
+<p>但母亲没有要求她永远记住自己。</p>
+<p>母亲写的是：</p>
+<blockquote>
+<p>“我希望你有一天不再需要我。
+真正的爱，不是永远留在你身边，
+而是让你有能力继续走向别人。”</p>
+</blockquote>
+<p>小满最终关闭了AI母亲。</p>
+<p>但她没有删除数据。</p>
+<p>她选择把母亲的记忆保存进万物邮局，作为一封“不必送达的信”。</p>
+<p>电影结尾，二十年后的林小满成为万物邮局的新任负责人。</p>
+<p>她收到一封来自地球的信。</p>
+<p>信封上写着：</p>
+<blockquote>
+<p>收件人：全体人类。</p>
+</blockquote>
+<p>第一部结束。</p>
+<hr/>
+<h1 id="full-section-10">四、中国文化如何进入，而不形成理解门槛</h1>
+<h2 id="full-section-11">1. 不输出中国符号，输出中国方法</h2>
+<p>影片不依赖龙、凤、功夫、神仙、古装等显性符号完成“中国表达”。</p>
+<p>中国性体现在人物如何处理关系：</p>
+<ul>
+<li>不把生死理解为绝对断裂，而是理解为生命关系的转化；</li>
+<li>不把个人看作孤立个体，而是看作家庭、社会、自然和时间中的一环；</li>
+<li>不把“孝”简化为服从，而是重新理解为跨代责任；</li>
+<li>不把“仁”解释为道德口号，而是表达为“承认他者也有痛苦”；</li>
+<li>不把“礼”表现为繁文缛节，而是表现为人与人相处时的边界和尊重；</li>
+<li>不把“信”理解为契约条款，而是“即使没有人监督，也愿意完成承诺”。</li>
+</ul>
+<h2 id="full-section-12">2. 将“仁义礼智信”拆解为五部作品</h2>
+<p>《万物来信》可以发展为五部电影或五季剧集：</p>
+<h3>第一部：仁——《给未来的回信》</h3>
+<p>主题：理解另一个生命的痛苦。</p>
+<p>讨论AI记忆、亲情、死亡与放手。</p>
+<h3>第二部：义——《最后一个陌生人》</h3>
+<p>主题：当帮助别人没有回报，人为什么仍然选择行动？</p>
+<p>围绕全球灾难、难民、普通人的互助展开。</p>
+<h3>第三部：礼——《世界边界管理局》</h3>
+<p>主题：不同文化、不同物种、人与AI之间，边界应该如何建立？</p>
+<p>“礼”不再是古代仪式，而是AI时代的相处协议。</p>
+<h3>第四部：智——《没有答案的孩子》</h3>
+<p>主题：当AI能够给出所有答案，人类还需要智慧吗？</p>
+<p>一个从不使用AI的中国老人，与全球最先进的儿童AI共同完成任务。</p>
+<h3>第五部：信——《一百年后见》</h3>
+<p>主题：一代人如何为自己看不到的未来承担责任？</p>
+<p>围绕气候、种子、森林、城市和代际承诺展开。</p>
+<p>由此，“仁义礼智信”不再是需要向外国观众讲解的中国知识，而成为五个全球社会共同面对的问题。</p>
+<hr/>
+<h1 id="full-section-13">五、全球化角色体系</h1>
+<h2 id="full-section-14">1. 主角不是完美英雄，而是情感入口</h2>
+<p>林小满不是承担宏大使命的天选之女。</p>
+<p>她是一个害怕失去、依赖技术、拒绝告别的普通女孩。</p>
+<p>全球观众不需要理解中国家庭制度，也能理解一个孩子对母亲的想念。</p>
+<p>这就是全球化叙事的第一原则：</p>
+<blockquote>
+<p>先找到所有人都经历过的情感，再寻找只有中国能给出的答案。</p>
+</blockquote>
+<h2 id="full-section-15">2. 核心角色</h2>
+<h3>林小满：中国</h3>
+<p>代表“记忆与放手”。</p>
+<p>视觉特征可以融合信封、海浪、植物嫩芽，避免传统古风少女的同质化设计。</p>
+<h3>阿木：肯尼亚</h3>
+<p>一名记录大象迁徙路线的少年。</p>
+<p>代表“人类是否有权决定其他生命的去向”。</p>
+<h3>卢娜：巴西</h3>
+<p>家族经营百年农场，但土地正在退化。</p>
+<p>代表“传统是否必须被继承”。</p>
+<h3>海婆婆：日本</h3>
+<p>独居老人，与过时的家用机器人生活。</p>
+<p>代表“陪伴究竟来自真实意识，还是持续回应”。</p>
+<h3>萨莉：印度尼西亚</h3>
+<p>来自即将被海水侵蚀的岛屿。</p>
+<p>代表“当故乡消失，一个人的身份还存在吗”。</p>
+<h3>墨：邮局AI</h3>
+<p>它能够翻译所有语言，却始终不理解“为什么人类明知会失去，仍然愿意去爱”。</p>
+<p>它将成为整个系列最具商业潜力的角色。</p>
+<hr/>
+<h1 id="full-section-16">六、超级IP的商业化设计</h1>
+<p>《万物来信》不能只是一部电影，而应从第一天就被设计成一个可持续运营的世界。</p>
+<h2 id="full-section-17">1. 内容矩阵</h2>
+<h3>院线电影</h3>
+<p>承担世界观、核心角色和情感高度。</p>
+<h3>动画短片</h3>
+<p>每集5—8分钟，讲述一封来自世界不同地区的信。</p>
+<p>可以与全球创作者合作，让每个国家的人讲述自己的“未寄之信”。</p>
+<h3>短剧与竖屏内容</h3>
+<p>不是简单切电影片段，而是推出：</p>
+<ul>
+<li>《邮局今日来信》</li>
+<li>《如果AI替你写最后一封信》</li>
+<li>《你最想把一句话寄给几年前的自己》</li>
+<li>《来自一棵树的语音留言》</li>
+<li>《世界上最晚收到的信》</li>
+</ul>
+<h3>纪录片</h3>
+<p>邀请真实人物参与：</p>
+<ul>
+<li>跨国移民家庭；</li>
+<li>患有记忆障碍的老人；</li>
+<li>濒危语言使用者；</li>
+<li>气候迁徙者；</li>
+<li>保存传统种子的农民；</li>
+<li>失去亲人后保留语音信息的人。</li>
+</ul>
+<p>纪录片不是电影附属花絮，而是为IP建立“真实世界根基”。</p>
+<h3>游戏</h3>
+<p>玩家成为万物邮局的投递员。</p>
+<p>每次任务不是打败敌人，而是理解寄件人与收件人真正需要什么。</p>
+<p>同一封信可以有不同投递方式，形成道德选择与情感分支。</p>
+<h3>AI互动产品</h3>
+<p>用户可以建立自己的“未来信箱”：</p>
+<ul>
+<li>给一年后的自己写信；</li>
+<li>给孩子成年后写信；</li>
+<li>给父母留下未说出口的话；</li>
+<li>记录一种正在消失的家乡声音；</li>
+<li>保存一段不希望被算法推荐、只希望未来某个人收到的内容。</li>
+</ul>
+<p>AI负责整理、翻译、保存和提醒，但不能自动替用户生成核心情感内容。</p>
+<p>这将形成IP最重要的原则：</p>
+<blockquote>
+<p>AI可以帮助人表达，但不能代替人感受。</p>
+</blockquote>
+<hr/>
+<h1 id="full-section-18">七、流量逻辑：不是为电影买流量，而是让全世界参与创作</h1>
+<p>传统电影营销的逻辑是：</p>
+<p>拍完电影—制作预告—购买热搜—明星路演—上映转化。</p>
+<p>《万物来信》的逻辑应该是：</p>
+<h2 id="full-section-19">先制造全球公共情绪，再让电影成为情绪的最终容器。</h2>
+<hr/>
+<h2 id="full-section-20">第一阶段：上映前一年——制造“未寄出的信”</h2>
+<p>发起全球内容行动：</p>
+<h1 id="full-section-21">The Letter I Never Sent</h1>
+<h1 id="full-section-22">那封没有寄出的信</h1>
+<p>邀请普通人录制30秒视频：</p>
+<ul>
+<li>最想对去世亲人说的话；</li>
+<li>最想对小时候的自己说的话；</li>
+<li>最想对故乡说的话；</li>
+<li>最想对未来孩子说的话；</li>
+<li>最想对一个已经不再联系的人说的话。</li>
+</ul>
+<p>内容不能以明星为中心。</p>
+<p>第一批种子用户应来自：</p>
+<ul>
+<li>护士；</li>
+<li>教师；</li>
+<li>移民；</li>
+<li>海员；</li>
+<li>留学生；</li>
+<li>老人；</li>
+<li>灾难幸存者；</li>
+<li>宠物救助者；</li>
+<li>环境保护者；</li>
+<li>跨国婚姻家庭。</li>
+</ul>
+<p>这些人的表达天然带有真实生命重量。</p>
+<p>明星和KOL在第二阶段参与，而不是第一阶段。</p>
+<p>因为只有当普通人的内容已经形成真实情绪场，明星加入才是放大，而不是表演。</p>
+<hr/>
+<h2 id="full-section-23">第二阶段：上映前六个月——“全球邮筒计划”</h2>
+<p>在万达影城、机场、大学、博物馆、书店、酒店、社区和海外合作影院设置实体“万物邮筒”。</p>
+<p>每个邮筒对应一个主题：</p>
+<ul>
+<li>写给母亲；</li>
+<li>写给故乡；</li>
+<li>写给未来；</li>
+<li>写给地球；</li>
+<li>写给没有见过的人；</li>
+<li>写给正在消失的东西。</li>
+</ul>
+<p>用户投信后获得一个唯一编号。</p>
+<p>部分信件将在获得授权后，被制作成：</p>
+<ul>
+<li>城市大屏内容；</li>
+<li>电影片尾字幕；</li>
+<li>公益短片；</li>
+<li>动画短片；</li>
+<li>AI多语言声音作品；</li>
+<li>城市公共艺术装置。</li>
+</ul>
+<p>用户不再只是观众，而是IP世界的一名寄件人。</p>
+<hr/>
+<h2 id="full-section-24">第三阶段：上映前三个月——一封信抵达一座城市</h2>
+<p>电影不采取全国同时高强度轰炸，而采用“涟漪式发行”。</p>
+<p>《给阿嬷的情书》的重要启示不是“小成本逆袭”，而是它先从最能理解潮汕语言和情感的人群中形成高浓度口碑，再逐步扩散至广东和全国。相关案例总结将其概括为由核心地域向外扩散的渐进式传播。</p>
+<p>《万物来信》可进一步升级为全球版本：</p>
+<h3>第一站：中国沿海城市</h3>
+<p>围绕“离乡、出海、侨批、母亲”形成首轮口碑。</p>
+<h3>第二站：东南亚华人社会</h3>
+<p>新加坡、马来西亚、印度尼西亚、泰国。</p>
+<p>不强调“中华文化输出”，而强调移民家庭、方言、代际关系和故乡记忆。</p>
+<h3>第三站：东亚市场</h3>
+<p>日本、韩国。</p>
+<p>聚焦老龄化、独居、AI陪伴、家庭疏离。</p>
+<h3>第四站：拉美市场</h3>
+<p>聚焦家族、土地、迁徙和记忆。</p>
+<h3>第五站：欧美市场</h3>
+<p>聚焦AI伦理、数字遗产、气候责任与个人选择。</p>
+<p>每个市场使用同一个故事内核，但选择不同的情感入口。</p>
+<hr/>
+<h1 id="full-section-25">八、借鉴《给阿嬷的情书》，但不能复制它</h1>
+<p>《给阿嬷的情书》能够形成现象级传播，关键不只是“亲情题材”，而是完成了四件事：</p>
+<h2 id="full-section-26">1. 找到了无需解释的情感关系</h2>
+<p>“阿嬷”是一个几乎所有文化都能理解的角色。</p>
+<p>观众先进入亲情，再进入潮汕文化。</p>
+<h2 id="full-section-27">2. 让地域性成为真实性，而不是门槛</h2>
+<p>方言、侨批、工夫茶、地方生活方式不是知识点，而是人物活过的生活。</p>
+<h2 id="full-section-28">3. 给观众提供了情感代偿</h2>
+<p>很多人并非在看别人的阿嬷，而是在补偿自己没能完成的告别。</p>
+<h2 id="full-section-29">4. 让观众成为发行者</h2>
+<p>当作品替观众说出了他们不会表达的话，观众会主动推荐作品。</p>
+<p>因此，《万物来信》的营销不能只是宣传“这是一部感人的电影”，而应当问：</p>
+<blockquote>
+<p>这部电影能替全球观众完成什么情感行动？</p>
+</blockquote>
+<p>答案是：</p>
+<h3>帮每个人寄出一封一直没有寄出的信。</h3>
+<hr/>
+<h1 id="full-section-30">九、万达影城的“超级场景”设计</h1>
+<p>对于儒意电影/万达影城而言，这个IP真正有价值的地方，不只是影片票房，而是它可以被转化为长期线下场景。</p>
+<p>儒意电影当前正在从传统“购票—观影—离场”模式转向IP沉浸体验、潮玩、社交影像与生活方式消费，并已公开强调观众愿意为体验和身份认同付费。</p>
+<h2 id="full-section-31">1. 万物邮局主题影城</h2>
+<p>将部分影城大堂改造成可持续运营的“城市情感邮局”。</p>
+<p>用户可以：</p>
+<ul>
+<li>写信；</li>
+<li>录制语音；</li>
+<li>拍摄未来照片；</li>
+<li>制作专属信封；</li>
+<li>领取角色邮票；</li>
+<li>参加城市主题展；</li>
+<li>查看来自其他国家的信；</li>
+<li>与AI邮差对话；</li>
+<li>购买文创与联名产品。</li>
+</ul>
+<h2 id="full-section-32">2. 观影后的第二空间</h2>
+<p>影片结束后，不让观众直接离开。</p>
+<p>设置“写信区”“声音区”“未来档案区”和“城市共同信件墙”。</p>
+<p>观众情绪在电影结束时达到高点，此时完成写信、拍照、分享和购买，转化率远高于普通电影衍生销售。</p>
+<h2 id="full-section-33">3. 一城一封信</h2>
+<p>每座城市共同完成一封写给未来的信。</p>
+<p>例如：</p>
+<ul>
+<li>深圳写给“离开家乡的人”；</li>
+<li>成都写给“慢一点的生活”；</li>
+<li>上海写给“一百年后的城市”；</li>
+<li>新加坡写给“所有漂洋过海的人”；</li>
+<li>雅加达写给“正在消失的岛屿”；</li>
+<li>悉尼写给“海洋”；</li>
+<li>东京写给“独居的人”。</li>
+</ul>
+<p>这使院线不只是电影放映终端，而成为城市公共情感基础设施。</p>
+<hr/>
+<h1 id="full-section-34">十、衍生品设计</h1>
+<p>衍生品不能只是印有角色头像的杯子和玩偶，而要让用户继续参与“写信”行为。</p>
+<h2 id="full-section-35">核心产品</h2>
+<ul>
+<li>万物邮票；</li>
+<li>未来信箱；</li>
+<li>AI声音胶囊；</li>
+<li>城市限定信封；</li>
+<li>植物种子信；</li>
+<li>角色毛绒玩具；</li>
+<li>墨AI邮差桌面机器人；</li>
+<li>可保存十年的电子墨水信件；</li>
+<li>家庭记忆档案盒；</li>
+<li>儿童“给未来的我”成长套装；</li>
+<li>情侣“不同时间抵达”的双人信；</li>
+<li>宠物生命纪念信箱。</li>
+</ul>
+<h2 id="full-section-36">高价值联名</h2>
+<ul>
+<li>博物馆与非遗机构；</li>
+<li>邮政系统；</li>
+<li>航空公司；</li>
+<li>国际酒店；</li>
+<li>环保组织；</li>
+<li>儿童教育机构；</li>
+<li>AI硬件公司；</li>
+<li>智能影像公司；</li>
+<li>全球大学；</li>
+<li>城市公共文化项目。</li>
+</ul>
+<hr/>
+<h1 id="full-section-37">十一、当下全球议题的深度融入</h1>
+<p>IP不应该机械追热点，而要选择能够持续十年以上的结构性议题。</p>
+<h2 id="full-section-38">1. 人工智能与人的关系</h2>
+<p>不是讨论AI会不会取代人，而是讨论：</p>
+<ul>
+<li>AI能否继承一个人的身份？</li>
+<li>数字记忆属于本人、家庭还是平台？</li>
+<li>人类是否有权关闭一个具有情感表达能力的AI？</li>
+<li>当AI比家人更理解你，家庭关系会发生什么？</li>
+<li>当AI能替人写信，人类真实表达是否会消失？</li>
+</ul>
+<p>联合国开发计划署近年来持续将AI与人类发展、不平等和人的选择联系起来，强调技术价值取决于它是否扩展人的能力，而不是只提高系统效率。</p>
+<h2 id="full-section-39">2. 气候变化</h2>
+<p>不是把环保做成背景板，而是让自然成为拥有叙事权的角色。</p>
+<p>一座岛、一片森林、一种植物，都可以成为寄件人。</p>
+<h2 id="full-section-40">3. 全球迁徙</h2>
+<p>不从国家冲突角度进入，而从“故乡是否可以被携带”进入。</p>
+<p>食物、语言、母亲的口音、一封旧信，都可能是故乡。</p>
+<h2 id="full-section-41">4. 老龄化与孤独</h2>
+<p>不是把老人设计成等待年轻人拯救的人，而是让老人拥有年轻人尚未理解的时间智慧。</p>
+<h2 id="full-section-42">5. 文化消失</h2>
+<p>每两周消失一种语言、传统技艺无人继承、地方生活被统一商业空间替代，这些都可转化为具体人物命运，而不是知识型表达。</p>
+<hr/>
+<h1 id="full-section-43">十二、为什么这是“中国IP”，而不是一部国际拼盘</h1>
+<p>这个项目必须保持一个明确的精神原点：</p>
+<h2 id="full-section-44">中国不是故事发生的唯一地点，但中国是世界观的提出者。</h2>
+<p>西方主流英雄叙事往往关注：</p>
+<ul>
+<li>个体如何战胜世界；</li>
+<li>主角如何完成自我实现；</li>
+<li>正义如何击败邪恶；</li>
+<li>人类如何控制自然和技术。</li>
+</ul>
+<p>《万物来信》提供另一种叙事：</p>
+<ul>
+<li>人不是孤立存在，而是关系的结果；</li>
+<li>真正的成长不只是成为自己，也是学会承担他人；</li>
+<li>世界不一定需要被征服，更需要被理解；</li>
+<li>解决问题不一定意味着消灭冲突，也可能意味着接受差异；</li>
+<li>生命的价值不仅来自拥有，也来自传递。</li>
+</ul>
+<p>这是中国文化能够贡献给全球叙事的一种底层结构。</p>
+<p>不是“中国角色进入好莱坞模式”。</p>
+<p>而是“中国思维提出一种新的全球故事模式”。</p>
+<hr/>
+<h1 id="full-section-45">十三、项目名称体系</h1>
+<h2 id="full-section-46">总IP名称</h2>
+<p>中文：《万物来信》</p>
+<p>英文：A Letter From Everything</p>
+<p>全球传播简称：ALFE</p>
+<h2 id="full-section-47">第一部电影</h2>
+<p>中文：《给未来的回信》</p>
+<p>英文：Reply to the Future</p>
+<h2 id="full-section-48">核心传播语</h2>
+<h3>中文</h3>
+<p>世界上最远的距离，不是无法抵达，而是从未说出口。</p>
+<p>每一个生命，都有一封等待被理解的信。</p>
+<p>AI可以翻译所有语言，但只有人能够完成理解。</p>
+<p>总有一些话，要跨越时间才能抵达。</p>
+<h3>英文</h3>
+<p>Every life has a letter waiting to be understood.</p>
+<p>AI can translate every language. Only humans can understand why it matters.</p>
+<p>Some words need a lifetime to arrive.</p>
+<p>The future is waiting for your reply.</p>
+<hr/>
+<h1 id="full-section-49">十四、项目开发路径</h1>
+<h2 id="full-section-50">第一阶段：全球母题验证</h2>
+<p>不急于立项大制作电影。</p>
+<p>先在中国、新加坡、马来西亚、日本、澳大利亚五个市场进行用户访谈与真实信件征集。</p>
+<p>判断哪些议题具有最高跨文化共鸣：</p>
+<ul>
+<li>母亲；</li>
+<li>离乡；</li>
+<li>未完成的告别；</li>
+<li>AI记忆；</li>
+<li>未来孩子；</li>
+<li>消失的故乡；</li>
+<li>宠物；</li>
+<li>老龄化；</li>
+<li>气候变化。</li>
+</ul>
+<h2 id="full-section-51">第二阶段：短片先行</h2>
+<p>制作5部不同国家、不同导演完成的8分钟短片。</p>
+<p>所有短片发生在同一个“万物邮局”世界观内。</p>
+<p>通过短片判断：</p>
+<ul>
+<li>哪个角色传播力最强；</li>
+<li>哪种情感跨文化转化最高；</li>
+<li>哪个市场最容易形成自传播；</li>
+<li>哪种衍生产品最受欢迎。</li>
+</ul>
+<h2 id="full-section-52">第三阶段：院线电影</h2>
+<p>在数据和真实用户反馈基础上完成长片剧本。</p>
+<p>避免传统电影先投入数亿元，再等待市场检验。</p>
+<h2 id="full-section-53">第四阶段：超级场景落地</h2>
+<p>在10—20家核心万达影城试点“万物邮局”。</p>
+<p>验证停留时长、UGC生产量、衍生消费和会员转化。</p>
+<h2 id="full-section-54">第五阶段：全球共创</h2>
+<p>开放“万物邮局世界观圣经”，邀请各国创作者开发本地故事。</p>
+<p>总部控制价值观、视觉体系、角色规则与商业授权，各市场负责真实文化表达。</p>
+<hr/>
+<h1 id="full-section-55">十五、项目真正的商业目标</h1>
+<p>这个项目的目标，不应只被定义为“打造一部中国电影海外爆款”。</p>
+<p>真正目标是：</p>
+<h2 id="full-section-56">建立一个由中国公司拥有核心版权、由全球创作者共同扩展、能够连接电影、院线、AI、潮玩、游戏、城市文化和社会议题的长期IP基础设施。</h2>
+<p>它最终可能成为：</p>
+<ul>
+<li>中国电影公司的全球原创内容品牌；</li>
+<li>全球青年共同参与的文化项目；</li>
+<li>儒意电影“超级场景+超级IP”的代表案例；</li>
+<li>中国企业进入国际文化市场的新范式；</li>
+<li>一个能够持续二十年的影视与消费品资产。</li>
+</ul>
+<p>《万物来信》最终卖的不是一张电影票，也不是一个角色玩偶。</p>
+<p>它卖的是一种身份：</p>
+<blockquote>
+<p>我愿意理解另一个与我不同的生命。
+我愿意把一些重要的东西，交给未来。</p>
+</blockquote>
+</article>
+    </div>
+  </div>
+</section>
+
+<section id="risk" class="detail-only detail-block">
+  <div class="wrap">
+    <div class="section-head"><div class="index">09 / RISK CONTROL</div><div><h2>必须提前守住的五条风险线</h2><div class="section-lead">高级概念只有被转化为明确边界，才有机会成为可执行项目。</div></div></div>
+    <div class="risk-table">
+      <div class="risk-row"><div class="risk-level">RISK 01</div><strong>概念大于人物</strong><span>第一部必须坚持单一家庭关系与清晰选择，不让世界观吞没人物。</span></div>
+      <div class="risk-row"><div class="risk-level">RISK 02</div><strong>文化表达说教化</strong><span>仁义礼智信只通过人物行动呈现，不做口号式解释。</span></div>
+      <div class="risk-row"><div class="risk-level">RISK 03</div><strong>AI沦为科技噱头</strong><span>AI必须推动人物困境与选择，而不是承担炫技画面。</span></div>
+      <div class="risk-row"><div class="risk-level">RISK 04</div><strong>国际化变成拼盘</strong><span>海外角色必须拥有独立命运与叙事主体性，采用本地联合创作机制。</span></div>
+      <div class="risk-row"><div class="risk-level">RISK 05</div><strong>衍生开发过早</strong><span>先验证电影角色和情感符号，再扩展商品、空间与AI服务。</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap" class="detail-only detail-block">
+  <div class="wrap">
+    <div class="section-head"><div class="index">10 / DEVELOPMENT ROADMAP</div><div><h2>从概念到全球IP的四阶段路径</h2><div class="section-lead">不追求一次铺满，而是以低成本验证、电影立项、场景联动和全球扩展逐级推进。</div></div></div>
+    <div class="four-stage three-col">
+      <div class="card"><div class="num">PHASE 01 · 0–3 MONTHS</div><h3>概念验证</h3><p>完成世界观圣经、第一部故事大纲、角色设计、全球来信征集测试与视觉概念片。</p></div>
+      <div class="card"><div class="num">PHASE 02 · 3–9 MONTHS</div><h3>项目立项</h3><p>形成剧本开发团队、国际顾问机制、导演与制片人组合，并完成首轮商业测算。</p></div>
+      <div class="card"><div class="num">PHASE 03 · 9–24 MONTHS</div><h3>电影与场景</h3><p>制作第一部电影，同步试点万物邮局、AI情感邮差与城市信件展。</p></div>
+      <div class="card"><div class="num">PHASE 04 · 24 MONTHS+</div><h3>全球扩展</h3><p>根据市场反馈进入系列电影、海外联合制作、城市授权与长期IP运营。</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta">
+      <div class="eyebrow">FINAL POSITIONING</div>
+      <h2>我们不是在卖一部电影。<br>我们是在提出一个属于未来的全球IP基础设施。</h2>
+      <p>它以电影建立共同情感，以影院创造真实场景，以AI延长关系，以全球共创不断生成新故事。它从中国出发，但最终让每个人都能在其中找到自己。</p>
+      <div class="hero-actions"><button class="btn primary js-detail-trigger" type="button">打开完整详细版</button><button class="btn js-print-trigger" type="button">打印 / 导出 PDF</button></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap footer"><span>《万物来信》全球原创超级IP开发计划</span><span>Prepared for Executive Review · Confidential Concept Proposal</span></footer>
+
+<script>
+(function(){
+  const body = document.body;
+  const modeButtons = Array.from(document.querySelectorAll('.mode-btn'));
+  const detailTriggers = Array.from(document.querySelectorAll('.js-detail-trigger'));
+  const printTriggers = Array.from(document.querySelectorAll('.js-print-trigger'));
+  const progress = document.getElementById('progress');
+  function applyMode(mode, shouldScroll){
+    const isDetail = mode === 'detail';
+    body.classList.toggle('detail-mode', isDetail);
+    body.classList.toggle('brief-mode', !isDetail);
+    modeButtons.forEach(function(button){
+      const active = button.getAttribute('data-mode') === mode;
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    try { localStorage.setItem('wanwu-mode', mode); } catch (e) {}
+    if (isDetail && shouldScroll) {
+      requestAnimationFrame(function(){
+        const target = document.getElementById('risk');
+        if (target) target.scrollIntoView({behavior:'smooth', block:'start'});
+      });
+    }
+  }
+  modeButtons.forEach(function(button){
+    button.addEventListener('click', function(){
+      const mode = button.getAttribute('data-mode');
+      applyMode(mode, mode === 'detail');
+    });
+  });
+  detailTriggers.forEach(function(button){
+    button.addEventListener('click', function(){ applyMode('detail', true); });
+  });
+  printTriggers.forEach(function(button){
+    button.addEventListener('click', function(){ window.print(); });
+  });
+  let savedMode = 'brief';
+  try { savedMode = localStorage.getItem('wanwu-mode') || 'brief'; } catch (e) {}
+  applyMode(savedMode === 'detail' ? 'detail' : 'brief', false);
+  window.addEventListener('scroll', function(){
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    if (progress) progress.style.width = (h > 0 ? (window.scrollY / h * 100) : 0) + '%';
+  }, {passive:true});
+  const seats = document.getElementById('seats');
+  if (seats && !seats.children.length) {
+    for (let i = 0; i < 45; i++) {
+      const seat = document.createElement('div');
+      seat.className = 'seat';
+      seats.appendChild(seat);
+    }
+  }
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.dataset.animated = '1';
+          entry.target.animate([{opacity:0, transform:'translateY(20px)'},{opacity:1, transform:'none'}],{duration:650,easing:'ease-out',fill:'both'});
+        }
+      });
+    }, {threshold:.08});
+    document.querySelectorAll('.card,.step-box,.space-card,.quote-panel').forEach(function(el){ observer.observe(el); });
+  }
+})();
+
+document.querySelectorAll('.js-expand-all').forEach(function(button){
+  button.addEventListener('click', function(){
+    document.querySelectorAll('.full-article details').forEach(function(item){ item.open = true; });
+  });
+});
+document.querySelectorAll('.js-collapse-all').forEach(function(button){
+  button.addEventListener('click', function(){
+    document.querySelectorAll('.full-article details').forEach(function(item){ item.open = false; });
+    var target = document.getElementById('full-document');
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+
+</script>
+</body>
+</html>
